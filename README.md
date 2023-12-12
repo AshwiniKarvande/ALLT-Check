@@ -1,2 +1,3 @@
 # ALLT-Check
-Android application for lateral flow assay based POCT for thyroid disorders
+Android application for lateral flow assay based POCT for thyroid disorders.
+
