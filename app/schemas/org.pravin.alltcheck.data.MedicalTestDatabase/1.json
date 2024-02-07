@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "8601f870fdf1146ad0326dce263e0462",
+    "entities": [
+      {
+        "tableName": "MedicalTestEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `patientId` TEXT NOT NULL, `testType` TEXT NOT NULL, `sampleDate` INTEGER NOT NULL, `sampleTime` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "patientId",
+            "columnName": "patientId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "testType",
+            "columnName": "testType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sampleDate",
+            "columnName": "sampleDate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sampleTime",
+            "columnName": "sampleTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8601f870fdf1146ad0326dce263e0462')"
+    ]
+  }
+}
